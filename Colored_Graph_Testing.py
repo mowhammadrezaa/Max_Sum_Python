@@ -32,36 +32,18 @@ from system.COP_Instance import COP_Instance
 
 
 def main():
-    # args = get_parser()
-    # no_iterations = args.iterations
-    # no_instances = args.instances
-    # no_variables = args.variables
-    # op = args.op
-    # report_maxsum = args.reportMaxSum
-    # directory = os.path.dirname(report_maxsum + "/TestingColoring/")
-    # if not os.path.exists(directory):
-    #     os.makedirs(directory)
-    # info_graph_file_path = args.reportFactorGraph
-    # directory = os.path.dirname(report_maxsum + "/FactorGraph/")
-    # if not os.path.exists(directory):
-    #     os.makedirs(directory)
-    # charts_file = args.reportCharts
-    # directory = os.path.dirname(report_maxsum + "/Charts/")
-    # if not os.path.exists(directory):
-    #     os.makedirs(directory)
-
     no_iterations = 5
     no_instances = 2
     no_variables = 6
     op = 'max'
-    report_maxsum_file_path = '/Users/mz/Desktop/project1/Max_Sum_Python/REPORT'
-    directory = os.path.dirname(report_maxsum_file_path + "/TestingColoring/")
+    report_maxsum_file_path = os.path.join(os.getcwd(), 'REPORT')
+    directory = os.path.join(report_maxsum_file_path, "TestingColoring")
     if not os.path.exists(directory):
         os.makedirs(directory)
-    directory = os.path.dirname(report_maxsum_file_path + "/FactorGraph/")
+    directory = os.path.join(report_maxsum_file_path, "FactorGraph")
     if not os.path.exists(directory):
         os.makedirs(directory)
-    directory = os.path.dirname(report_maxsum_file_path + "/Charts/")
+    directory = os.path.join(report_maxsum_file_path, "Charts")
     if not os.path.exists(directory):
         os.makedirs(directory)
     info_graph_file_path = report_maxsum_file_path
