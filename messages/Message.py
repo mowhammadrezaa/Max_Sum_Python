@@ -7,12 +7,7 @@ Created on 21 apr 2017
 
 This class implements all the necessary methods to perform a Message.
 '''
-
-import sys, os
-
-sys.path.append(os.path.abspath('../messages/'))
-
-from MessageContent import MessageContent
+from messages.MessageContent import MessageContent
 
 
 class Message:

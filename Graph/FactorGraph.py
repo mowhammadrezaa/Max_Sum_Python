@@ -13,7 +13,7 @@ import sys, os
 
 sys.path.append(os.path.abspath('../Graph/'))
 
-from Edge import Edge
+from Graph.Edge import Edge
 
 
 class FactorGraph:

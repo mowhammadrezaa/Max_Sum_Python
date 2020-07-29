@@ -8,13 +8,9 @@ Created on 22 apr 2017
 This is an Interface that permits to create q-message and r-message
 '''
 
-import sys, os
+from messages.MessageR import MessageR
+from messages.MessageQ import MessageQ
 
-sys.path.append(os.path.abspath('../Graph/'))
-sys.path.append(os.path.abspath('../messages/'))
-
-from MessageR import MessageR
-from MessageQ import MessageQ
 
 class MessageFactory:
     

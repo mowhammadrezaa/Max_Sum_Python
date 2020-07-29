@@ -10,12 +10,6 @@ This is an abstract class that gives the implementation of evaluateMod.
 Calculates the actual value of a function and it manages the cost function
 '''
 
-import sys, os
-
-sys.path.append(os.path.abspath('../misc/'))
-sys.path.append(os.path.abspath('../Graph/'))
-
-from NodeArgumentArray import NodeArgumentArray
 
 class FunctionEvaluator:
          

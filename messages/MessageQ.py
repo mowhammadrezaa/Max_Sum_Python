@@ -8,12 +8,7 @@ Created on 22 apr 2017
 This is class manages a q-message
 '''
 
-import sys, os
-
-sys.path.append(os.path.abspath('../Graph/'))
-sys.path.append(os.path.abspath('../messages/'))
-
-from Message import Message
+from messages.Message import Message
 
 
 class MessageQ(Message):

@@ -10,21 +10,15 @@ It implements the Max Sum Algorithm (max/min)
 '''
 
 import time
-import sys, os
 from decimal import Decimal
 import datetime
 
-sys.path.append(os.path.abspath('../maxsum/'))
-sys.path.append(os.path.abspath('../messages/'))
-sys.path.append(os.path.abspath('../operation/'))
-sys.path.append(os.path.abspath('../system/'))
-
-from MailMan import MailMan
-from MessageFactory import MessageFactory
-from Sum import Sum
-from Max import Max
-from Min import Min
-from MSumOperator import MSumOperator
+from messages.MailMan import MailMan
+from messages.MessageFactory import MessageFactory
+from operation.Sum import Sum
+from operation.Max import Max
+from operation.Min import Min
+from operation.MSumOperator import MSumOperator
 
 
 class MaxSum:

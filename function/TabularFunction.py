@@ -1,51 +1,21 @@
-# coding=utf-8
-
-'''
-Created on 09 mag 2017
-
-@author: Andrea Montanari
-
-Tabular Function, implementation of abstract Function Evaluator.
-Used for discrete functions.
-This class manages the cost functions and the maximization/minimization
-'''
-
-import sys, os
 from decimal import Decimal
 
-sys.path.append(os.path.abspath('../function/'))
-sys.path.append(os.path.abspath('../misc/'))
-
-from FunctionEvaluator import FunctionEvaluator
-from NodeArgumentArray import NodeArgumentArray
+from function.FunctionEvaluator import FunctionEvaluator
+from misc.NodeArgumentArray import NodeArgumentArray
 
 
 class TabularFunction(FunctionEvaluator):
-    '''
+    """
         Correspondence between parameters and function values.
         The parameters are nodeVariables and the values are costs [NodeVariable -> cost]
-    '''
-    costTable = dict()
-    '''
-        list of parameters of cost function (NodeVariables)
-    '''
-    parameters = list()
-    '''
-        minimun cost of function 
-    '''
-    minCost = None
-    '''
-        maximun cost of function 
-    '''
-    maxCost = None
-    
-    report = ""
-    
-    
+    """
     def __init__(self):
+        # list of parameters of cost function (NodeVariables)
         self.parameters = list()
         self.costTable = dict()
+        # minimum cost of function
         self.minCost = None
+        # maximum cost of function
         self.maxCost = None
         
         self.report = ""
@@ -305,14 +275,13 @@ class TabularFunction(FunctionEvaluator):
         maxes = self.maxmin(op, maxes, functionArgument, x, xIndex, modifierTable)
         
         return maxes 
-    
-    
+
     def toString(self):
         ris = "Function evaluator with " + str(self.entryNumber()) + " entries\n"
         ris = ris + "NodeVariable used: " 
         
         for i in range(self.parameters.__len__()):
-            ris = ris + str(self.parameters[i].toString()) + " "
+            ris = ris + str(self.parameters[i].__str__()) + " "
             
         ris = ris + "\n"
             

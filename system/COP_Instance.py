@@ -8,12 +8,7 @@ Created on 19 apr 2017
 COP class is a Representation of a Constraint Optimization Problem.
 '''
 
-import sys, os
-
-sys.path.append(os.path.abspath('../maxsum/'))
-sys.path.append(os.path.abspath('../Graph/'))
-
-from FactorGraph import FactorGraph
+from Graph.FactorGraph import FactorGraph
 
 
 class COP_Instance:
